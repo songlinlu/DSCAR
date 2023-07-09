@@ -1,9 +1,10 @@
 # SCAR
 ![image](picture/scarvover.png)
 
-![image](picture/dscar_net.png)
 ## Architecture of DSCARNet
+![image](picture/dscar_net.png)
 
+---
 - SCAR is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
 - The performance of SCAR and DSCARNet was tested on 8 datasets listed here.
 ```
