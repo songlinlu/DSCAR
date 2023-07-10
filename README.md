@@ -1,4 +1,4 @@
-<img src="picture/scarvover.png" align="right" height="250" width="550" >
+<img src="picture/scarvover.png" align="right" height="250" width="500" >
 
 # SCAR 
 ### A simple tool for Raman spectra 2D representation and fast modeling.
