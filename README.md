@@ -32,7 +32,7 @@
 ## Usage
 1. You should install the AggMap tool first. Follow the installation instruction of AggMap.
 2. Preprocess your data, make it into .csv format. The feature should be the wavenumber, and the feature value should be the intensity of the wavenumber.
-3. Follow the steps in model_training.ipynb.
+3. Follow the steps in 1_model_training.ipynb.
 ```python
 from aggmap import AggMap
 import tensorflow as tf
