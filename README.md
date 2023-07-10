@@ -28,12 +28,6 @@
 - For more information about AggMap, please visit https://github.com/shenwanxiang/bidd-aggmap
 
 ## Usage
-You should install the AggMap tool first.
-Follow the installation instruction of AggMap.
-```bash
-# create an aggmap env
-conda create -n aggmap python=3.7
-conda activate aggmap
-pip install --upgrade pip
-pip install aggmap
-```
+1. You should install the AggMap tool first. Follow the installation instruction of AggMap.
+2. Preprocess your data, make it into .csv format. The feature should be the wavenumber, and the feature value should be the intensity of the wavenumber.
+3. Follow the steps in model_training.ipynb.
