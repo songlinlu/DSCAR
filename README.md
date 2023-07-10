@@ -1,5 +1,6 @@
 # SCAR
-![image](picture/scarvover.png)
+<!-- ![image](picture/scarvover.png) -->
+<img src="picture/scarvover.png" align="left" height="170" width="130" >
 
 ## Architecture of DSCARNet
 ![image](picture/dscar_net.png)
@@ -18,3 +19,5 @@
 8.Ho C S, Jean N, Hogan C A, et al. Rapid identification of pathogenic bacteria using Raman spectroscopy and deep learning[J]. Nature communications, 2019, 10(1): 4927.
 ```
 - For more information about AggMap, please visit https://github.com/shenwanxiang/bidd-aggmap
+
+## Installation
