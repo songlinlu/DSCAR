@@ -13,8 +13,8 @@
 ![image](picture/dscar_net.png)
 
 ---
-- SCAR is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
-- The performance of SCAR and DSCARNet was tested on 8 datasets listed here.
+- DSCARNet is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
+- The performance of DSCARNet was evaluated on 8 datasets listed here.
 ```
 1.Gala de Pablo J, Armistead F J, Peyman S A, et al. Biochemical fingerprint of colorectal cancer cell lines using label‐free live single‐cell Raman spectroscopy[J]. Journal of Raman Spectroscopy, 2018, 49(8): 1323-1332.
 2.Baria E, Cicchi R, Malentacchi F, et al. Supervised learning methods for the recognition of melanoma cell lines through the analysis of their Raman spectra[J]. Journal of Biophotonics, 2021, 14(3): 202000365.
@@ -27,4 +27,13 @@
 ```
 - For more information about AggMap, please visit https://github.com/shenwanxiang/bidd-aggmap
 
-## Installation
+## Usage
+You should install the AggMap tool first.
+Follow the installation instruction of AggMap.
+```bash
+# create an aggmap env
+conda create -n aggmap python=3.7
+conda activate aggmap
+pip install --upgrade pip
+pip install aggmap
+```
