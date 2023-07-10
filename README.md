@@ -1,6 +1,7 @@
-# SCAR
-<!-- ![image](picture/scarvover.png) -->
 <img src="picture/scarvover.png" align="right" height="170" width="130" >
+
+# SCAR 
+<!-- ![image](picture/scarvover.png) -->
 
 ## Architecture of DSCARNet
 ![image](picture/dscar_net.png)
