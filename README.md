@@ -1,11 +1,13 @@
 <img src="picture/scarvover.png" align="right" height="250" width="490" >
 
 # SCAR 
-### A simple tool for Raman spectra 2D representation and fast modeling.
+### A simple tool for Raman spectra 2D representation and fast modeling
 
 
 <br />
 
+## 2D representation of Raman spectra
+![image](picture/2d.png)
 
 ## Architecture of DSCARNet
 ![image](picture/dscar_net.png)
