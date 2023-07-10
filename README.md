@@ -5,7 +5,7 @@
 
 ### A simple tool for Raman spectra 2D representation and fast modeling
 
-
+---
 <br />
 
 ## 2D representation of Raman spectra
@@ -14,7 +14,7 @@
 ## Architecture of DSCARNet
 ![image](picture/dscar_net.png)
 
----
+
 - DSCARNet is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
 - The performance of DSCARNet was evaluated on 8 datasets listed here.
 ```
