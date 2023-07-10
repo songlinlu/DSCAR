@@ -33,3 +33,54 @@
 1. You should install the AggMap tool first. Follow the installation instruction of AggMap.
 2. Preprocess your data, make it into .csv format. The feature should be the wavenumber, and the feature value should be the intensity of the wavenumber.
 3. Follow the steps in model_training.ipynb.
+```python
+from aggmap import AggMap
+import tensorflow as tf
+import os
+import pandas as pd
+import numpy as np
+
+from utils.dscarnet import dual_dscarnet
+from utils.PCA_tool import PCA_transform
+#load data
+df = pd.read_csv('your_path_X.csv')
+df_pca = PCA_transform(df,how_many_PCs_you_need)
+#2D transformation
+mp_sar = AggMap(df,metric = 'euclidean')
+mp_sar = mp_sar.fit(cluster_channels = 9, verbose = 0)
+mp_car = AggMap(df_pca,metric = 'euclidean')
+mp_car = mp_car.fit(cluster_channels = 9, verbose = 0)
+X1 = mp_sar.batch_transform(df.values,scale_method = 'minmax')
+X2 = mp_car.batch_transform(df_pca.values,scale_method = 'minmax')
+#model training
+Y = pd.read_csv('your_path_Y.csv')
+Y = pd.get_dummies(Y).values
+#5-FCV example
+outer = StratifiedKFold(n_splits = 5, shuffle = True, random_state = 8)
+outer_idx = list(outer.split(X1,df['label']))
+for i, idx in enumerate(outer_idx):
+    
+    train_idx, valid_idx = idx
+
+    validY = Y[valid_idx]
+    validX = X1[valid_idx],X2[valid_idx]
+
+    trainY = Y[train_idx]
+    trainX = X1[train_idx],X2[train_idx]
+    
+    model = dual_dscarnet(X1.shape[1:], X2.shape[1:])
+    opt = tf.keras.optimizers.Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0) #
+    model.compile(optimizer = opt, loss = 'categorical_crossentropy',metrics=['accuracy'])
+
+
+    early_stopping_cb = tf.keras.callbacks.EarlyStopping(monitor="val_accuracy", patience=10,#for example
+                                                      restore_best_weights=True)
+
+    model.fit(trainX, trainY,
+                              batch_size=128, 
+                              epochs= 10,#for example 
+                                verbose= 1, shuffle = True, 
+                              validation_data = (validX, validY), 
+                               callbacks=[early_stopping_cb],)
+    break#for example
+```
