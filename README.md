@@ -1,4 +1,4 @@
-<img src="picture/scarvover.png" align="right" height="260" width="480" >
+<img src="picture/scarvover.png" align="right" height="250" width="480" >
 
 # DSCARNet 
 <br />
