@@ -5,9 +5,9 @@
 
 ### A simple tool for Raman spectra 2D representation and fast modeling
 
----
-<br />
 
+<br />
+---
 ## 2D representation of Raman spectra
 ![image](picture/2d.png)
 
