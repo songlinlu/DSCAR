@@ -1,6 +1,6 @@
 <img src="picture/scarvover.png" align="right" height="250" width="490" >
 
-# SCAR 
+# DSCARNet 
 ### A simple tool for Raman spectra 2D representation and fast modeling
 
 
