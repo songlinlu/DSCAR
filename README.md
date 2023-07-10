@@ -1,4 +1,4 @@
-<img src="picture/scarvover.png" align="right" height="280" width="500" >
+<img src="picture/scarvover.png" align="right" height="260" width="480" >
 
 # DSCARNet 
 <br />
@@ -7,7 +7,6 @@
 
 
 <br />
----
 
 ## 2D representation of Raman spectra
 ![image](picture/2d.png)
@@ -15,7 +14,7 @@
 ## Architecture of DSCARNet
 ![image](picture/dscar_net.png)
 
-
+---
 - DSCARNet is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
 - The performance of DSCARNet was evaluated on 8 datasets listed here.
 ```
