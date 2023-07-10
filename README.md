@@ -1,4 +1,4 @@
-<img src="picture/scarvover.png" align="right" height="200" width="800" >
+<img src="picture/scarvover.png" align="right" height="200" width="500" >
 
 # SCAR 
 <!-- ![image](picture/scarvover.png) -->
