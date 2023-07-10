@@ -127,7 +127,6 @@ def GlobalIMP(clf, mp, X, Y, task_type = 'classification',
     df_just_smooth = df_grid.join(df_just_smooth)
   
     del clf
-    
     gc.collect()
     K.clear_session()
     return df_just_log,df_just_smooth
