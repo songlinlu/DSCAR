@@ -15,7 +15,6 @@
 ![image](picture/dscar_net.png)
 
 ---
-- DSCARNet is a tool based on AggMap, which could transform the raman spectra data into 2-D format map.
 - The performance of DSCARNet was evaluated on 8 datasets listed here.
 ```
 1.Gala de Pablo J, Armistead F J, Peyman S A, et al. Biochemical fingerprint of colorectal cancer cell lines using label‐free live single‐cell Raman spectroscopy[J]. Journal of Raman Spectroscopy, 2018, 49(8): 1323-1332.
@@ -27,10 +26,9 @@
 7.Du J, Su Y, Qian C, et al. Raman-guided subcellular pharmaco-metabolomics for metastatic melanoma cells[J]. Nature communications, 2020, 11(1): 1-16.
 8.Ho C S, Jean N, Hogan C A, et al. Rapid identification of pathogenic bacteria using Raman spectroscopy and deep learning[J]. Nature communications, 2019, 10(1): 4927.
 ```
-- For more information about AggMap, please visit https://github.com/shenwanxiang/bidd-aggmap
 
 ## Usage
-1. You should install the AggMap tool first. Follow the installation instruction of AggMap.
+1. You should install the AggMap tool first. Follow the installation instruction of AggMap.For more information about AggMap, please visit https://github.com/shenwanxiang/bidd-aggmap
 2. Preprocess your data, make it into .csv format. The feature should be the wavenumber, and the feature value should be the intensity of the wavenumber.
 3. Follow the steps in 1_model_training.ipynb.
 ```python
