@@ -1,6 +1,6 @@
 <img src="picture/scarvover.png" align="right" height="250" width="480" >
 
-# DSCARNet 
+# DSCAR
 <br />
 
 ### A simple tool for Raman spectra 2D representation and fast modeling
@@ -8,10 +8,10 @@
 
 <br />
 
-## 2D representation of Raman spectra
+## DSCAR: 2D representation of Raman spectra
 ![image](picture/2d.png)
 
-## Architecture of DSCARNet
+## DSCARNet: Deep learning model for 2D-SARs and 2D-CARs
 ![image](picture/dscar_net.png)
 
 ---
