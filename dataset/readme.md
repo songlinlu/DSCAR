@@ -1,8 +1,10 @@
 Download the PB30 dataset from https://www.dropbox.com/sh/gmgduvzyl5tken6/AABtSWXWPjoUBkKyC2e7Ag6Da?dl=0 <br />
 Other datasets used in the paper could be downloaded from each reference.
 ```
-1.Gala de Pablo J, Armistead F J, Peyman S A, et al. Biochemical fingerprint of colorectal cancer cell lines using label‐free live single‐cell Raman spectroscopy[J]. Journal of Raman Spectroscopy, 2018, 49(8): 1323-1332.
+1.Gala de Pablo J, Armistead F J, Peyman S A, et al. Biochemical fingerprint of colorectal cancer cell lines using label‐free live single‐cell Raman spectroscopy[J]. Journal of Raman Spectroscopy, 2018, 49(8): 1323-1332. 
+https://archive.researchdata.leeds.ac.uk/337/
 2.Baria E, Cicchi R, Malentacchi F, et al. Supervised learning methods for the recognition of melanoma cell lines through the analysis of their Raman spectra[J]. Journal of Biophotonics, 2021, 14(3): 202000365.
+
 3.Akagi Y, Mori N, Kawamura T, et al. Non-invasive cell classification using the Paint Raman Express Spectroscopy System (PRESS)[J]. Scientific reports, 2021, 11(1): 1-15.
 4.Hsu C C, Xu J, Brinkhof B, et al. A single-cell Raman-based platform to identify developmental stages of human pluripotent stem cell-derived neurons[J]. Proceedings of the National Academy of Sciences, 2020, 117(31): 18412-18423.
 5.García‐Timermans C, Rubbens P, Heyse J, et al. Discriminating bacterial phenotypes at the population and single‐cell level: a comparison of flow cytometry and Raman spectroscopy fingerprinting[J]. Cytometry Part A, 2020, 97(7): 713-726.
