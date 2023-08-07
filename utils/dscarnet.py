@@ -4,15 +4,37 @@ from tensorflow.keras.layers import MaxPool2D, GlobalMaxPool2D, BatchNormalizati
 from tensorflow.keras.layers import Conv2D, Concatenate, Dense,AveragePooling2D
 from tensorflow.keras.backend import int_shape
 
+def Conv2D_BN(x,filters,
+              num_row,
+              num_col,
+              padding='same',
+              strides=(1, 1),
+              batchnorm=False):
+    if batchnorm:
+        x = Conv2D(
+          filters, (num_row, num_col),
+          strides=strides,
+          padding=padding,
+          use_bias=False, )(x)
+        x = BatchNormalization()(x)
+        x = Activation('relu')(x)
+    else:
+        x = Conv2D(
+          filters, (num_row, num_col),
+          strides=strides,
+          padding=padding,
+          use_bias=False, 
+          )(x)
+        x = Activation('relu')(x)
+    return x
 
-lamda = 0.01
 def conv2d_bn(x,filters,
               num_row,
               num_col,
               padding='same',
               strides=(1, 1),
               batchnorm=False):
-
+    lamda = 0.01
     if batchnorm:
         x = Conv2D(
           filters, (num_row, num_col),
@@ -49,14 +71,14 @@ def single_dscarnet(input_shape, filter_number = 64,
     
     inputs = Input(input_shape)
     
-    x = conv2d_bn(inputs, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
+    x = Conv2D_BN(inputs, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
     if int_shape(x)[1]>25:
-        x = conv2d_bn(x, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
-        x = conv2d_bn(x, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
         
     else:
-        x = conv2d_bn(x, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
-        x = conv2d_bn(x, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
 
     x = MaxPool2D(pool_size = 3, strides = 2, padding = 'same')(x)
 
@@ -102,14 +124,14 @@ def dual_dscarnet(input_shape, input_shape2, filter_number = 64,
     
     inputs = Input(input_shape)
     
-    x = conv2d_bn(inputs, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
+    x = Conv2D_BN(inputs, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
     if int_shape(x)[1]>25:
-        x = conv2d_bn(x, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
-        x = conv2d_bn(x, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
         
     else:
-        x = conv2d_bn(x, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
-        x = conv2d_bn(x, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x = Conv2D_BN(x, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
 
     x = MaxPool2D(pool_size = 3, strides = 2, padding = 'same')(x)
 
@@ -132,14 +154,14 @@ def dual_dscarnet(input_shape, input_shape2, filter_number = 64,
     
     inputs2 = Input(input_shape2)
     
-    x2 = conv2d_bn(inputs2, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
+    x2 = Conv2D_BN(inputs2, 64, conv1_kernel_size, conv1_kernel_size, 'same', 1, batchnorm=batchnorm)
     if int_shape(x)[1]>25:
-        x2 = conv2d_bn(x2, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
-        x2 = conv2d_bn(x2, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x2 = Conv2D_BN(x2, 96, 5, 5, 'valid', 2, batchnorm=batchnorm)
+        x2 = Conv2D_BN(x2, 128, 5, 5,  'valid', 1, batchnorm=batchnorm)
         
     else:
-        x2 = conv2d_bn(x2, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
-        x2 = conv2d_bn(x2, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
+        x2 = Conv2D_BN(x2, 96, 5, 5,  'valid', 1, batchnorm=batchnorm)
+        x2 = Conv2D_BN(x2, 128, 5, 5,  'same', 1, batchnorm=batchnorm)
 
     x2 = MaxPool2D(pool_size = 3, strides = 2, padding = 'same')(x2)
 
