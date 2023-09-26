@@ -3,7 +3,7 @@
 # DSCAR & DSCARNet
 <br />
 
-### A new tool for Raman spectra 2D representation and fast modeling
+### A new tool for Raman spectra 2D representation and modeling
 
 
 <br />
