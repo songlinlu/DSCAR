@@ -9,7 +9,7 @@
 <br />
 
 ## DSCAR: 2D representation of Raman spectra
-![image](picture/2d.png)
+![image](picture/fig.png)
 
 ## DSCARNet: Deep learning model for 2D-SARs and 2D-CARs
 ![image](picture/dscar_net.png)
