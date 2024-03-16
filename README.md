@@ -48,8 +48,8 @@ mp_sar = AggMap(df,metric = 'euclidean')
 mp_sar = mp_sar.fit(cluster_channels = 9, verbose = 0)
 mp_car = AggMap(df_pca,metric = 'euclidean')
 mp_car = mp_car.fit(cluster_channels = 9, verbose = 0)
-X1 = mp_sar.batch_transform(df.values,scale_method = 'minmax')
-X2 = mp_car.batch_transform(df_pca.values,scale_method = 'minmax')
+X1 = mp_sar.batch_transform(df.values,scale_method = 'minmax')#or scale=False, if no scaling
+X2 = mp_car.batch_transform(df_pca.values,scale_method = 'minmax')#or scale=False, if no scaling
 #model training
 Y = pd.read_csv('your_path_Y.csv')
 Y = pd.get_dummies(Y).values
