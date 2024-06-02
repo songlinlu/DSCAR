@@ -1,5 +1,5 @@
 Download the PB30 dataset from https://www.dropbox.com/sh/gmgduvzyl5tken6/AABtSWXWPjoUBkKyC2e7Ag6Da?dl=0 (Ho C S, Jean N, Hogan C A, et al. Rapid identification of pathogenic bacteria using Raman spectroscopy and deep learning[J]. Nature communications, 2019, 10(1): 4927.)
-<br /> Raman saliva dataset is from: Bertazioli D, Piazza M, Carlomagno C, et al. An integrated computational pipeline for machine learning-driven diagnosis based on Raman spectra of saliva samples[J]. Computers in Biology and Medicine, 2024, 171: 108028.<br />https://github.com/MIND-Lab/Raman-Spectra-Data
+<br /> Raman saliva dataset is from: Bertazioli D, Piazza M, Carlomagno C, et al. An integrated computational pipeline for machine learning-driven diagnosis based on Raman spectra of saliva samples[J]. Computers in Biology and Medicine, 2024, 171: 108028.<br />https://github.com/MIND-Lab/Raman-Spectra-Data 
 <br /> Other datasets used in the paper could be downloaded from each reference. (If the dataset is avaliable)
 
 ```
