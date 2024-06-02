@@ -31,6 +31,10 @@
 1. You should install the AggMap tool first. Follow the installation instruction of AggMap.For more information, please visit https://github.com/shenwanxiang/bidd-aggmap
 2. Preprocess your data, make it into .csv format. The feature should be the wavenumber, and the feature value should be the intensity of the wavenumber.
 3. Follow the steps in 1_model_training.ipynb.
+Output  list:
+1. 2D-SARs and 2D-CARs visualization for Raman data.
+2. Models for classification.
+3. Important feature ranking and saliency map for datasets.
 ```python
 from aggmap import AggMap
 import tensorflow as tf
